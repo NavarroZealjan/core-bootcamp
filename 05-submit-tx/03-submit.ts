@@ -1,7 +1,7 @@
 // 0x3b26E8DA9aDedAAe86a260b6354aC1855AA65C14
 
-import path from 'path'
-require('dotenv').config({ path: path.resolve(__dirname, '.env') });
+import path from "path";
+require("dotenv").config({ path: path.resolve(__dirname, ".env") });
 
 import {
   Hex,
@@ -25,7 +25,7 @@ const account = privateKeyToAccount(`0x${privateKey}` as Hex);
     transport: http(process.env.API_URL),
   }).extend(publicActions);
 
-  const contractAddress = '0x3b26E8DA9aDedAAe86a260b6354aC1855AA65C14';
+  const contractAddress = "0x3b26E8DA9aDedAAe86a260b6354aC1855AA65C14";
   const contract = getContract({
     address: contractAddress,
     abi,
@@ -33,10 +33,10 @@ const account = privateKeyToAccount(`0x${privateKey}` as Hex);
   });
 
   const tx = await contract.write.recordSubmission([
-    'markneri',
-    'kimerran',
-    '0x3b26E8DA9aDedAAe86a260b6354aC1855AA65C14',
-    '0x3b26E8DA9aDedAAe86a260b6354aC1855AA65C14'
-    ]);    
-  console.log('tx', tx);
+    "Zealjan",
+    "Zealjan",
+    "0x3b26E8DA9aDedAAe86a260b6354aC1855AA65C14",
+    "0x3b26E8DA9aDedAAe86a260b6354aC1855AA65C14",
+  ]);
+  console.log("tx", tx);
 })();
